@@ -346,5 +346,9 @@ u32 GraphicsFramebufferWidget::BytesPerPixel(GraphicsFramebufferWidget::Format f
         case Format::RGBA4:
         case Format::D16:
             return 2;
+        default:
+            LOG_CRITICAL(Debug, "Unknown framebuffer format");
+            UNIMPLEMENTED();
+            return 0;
     }
 }
